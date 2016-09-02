@@ -1,15 +1,16 @@
 snippet ng2-component
-  import { Component, OnInit } from '@angular/core';
+  import { Component } from '@angular/core';
+  import { template } from './${1:#:templateName}.template';
+  import { style } from './${1:#:styleName}.style';
 
   @Component({
-    moduleId: module.id,
     selector: '${1:#:selector}',
-    templateUrl: '${2:#:name}.component.html'
+    template: template,
+    styles: [style]
   })
-  export class ${1:#:ComponentName}Component implements OnInit {
+  export class ${2:#:ComponentName}Component {
     constructor() { }
 
-    ngOnInit() { }
     ${0}
   }
 
