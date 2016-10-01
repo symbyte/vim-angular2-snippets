@@ -12,6 +12,22 @@ snippet ng2-component
     ${0}
   }
 
+snippet ng2-spec
+  import { TestBed } from '@angular/core/testing';
+
+  describe('${1:#:unitUnderTest}', () => {
+    const providers = [
+      ${2:#:Provider}
+    ];
+
+    beforeEach(() => {
+      TestBed.configureTestingModule({
+        providers
+      });
+    });
+    ${0}
+  });
+
 snippet ng2-service
   import { Injectable } from '@angular/core';
 
