@@ -1,14 +1,13 @@
 snippet ng2-component
   import { Component } from '@angular/core';
-  import { template } from './${1:#:templateName}.template';
   import { style } from './${1:#:styleName}.style';
 
   @Component({
-    selector: '${1:#:selector}',
-    template: template,
+    selector: '${2:#:selector}',
+    template: ``,
     styles: [style]
   })
-  export class ${2:#:ComponentName}Component {
+  export class ${3:#:ComponentName}Component {
     constructor() { }
 
     ${0}
